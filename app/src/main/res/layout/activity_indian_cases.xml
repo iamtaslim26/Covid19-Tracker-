@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IndianCasesActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        app:cardElevation="10dp"
+        android:id="@+id/cardViewGraph1"
+        app:cardCornerRadius="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            >
+            <org.eazegraph.lib.charts.PieChart
+                android:id="@+id/piechart1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:padding="6dp"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="15dp"
+                />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:gravity="center_vertical">
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/cases"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Cases"
+                        android:paddingLeft="10dp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="5dp">
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/recovered"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Recovered"
+                        android:paddingLeft="10dp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="5dp">
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/deaths"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Deaths"
+                        android:paddingLeft="10dp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="5dp">
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:elevation="3dp"
+        app:cardCornerRadius="3dp"
+        android:layout_below="@id/cardViewGraph1">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="India Record"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cases"
+                        android:padding="4dp"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textAlignment="center"/>
+
+
+                    <TextView
+                        android:id="@+id/no_of_cases"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No of cases "
+                        android:padding="4dp"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/cases"
+                        android:textAlignment="center"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Recovered"
+                        android:padding="4dp"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textAlignment="center"/>
+
+
+                    <TextView
+                        android:id="@+id/no_of_recovered"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=" recovered "
+                        android:padding="4dp"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/recovered"
+                        android:textAlignment="center"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Deaths"
+                        android:padding="4dp"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textAlignment="center"/>
+
+
+                    <TextView
+                        android:id="@+id/no_of_deaths"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No of deaths "
+                        android:padding="4dp"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/deaths"
+                        android:textAlignment="center"/>
+                </LinearLayout>
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Discharged"-->
+<!--                        android:padding="4dp"-->
+<!--                        android:textSize="15sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textAlignment="center"/>-->
+
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/no_of_discharged"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Discharged"-->
+<!--                        android:padding="4dp"-->
+<!--                        android:textSize="15sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textColor="@color/active"-->
+<!--                        android:textAlignment="center"/>-->
+<!--                </LinearLayout>-->
+
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/state_wise_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cardview"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>

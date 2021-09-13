@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
     private PieChart pieChart;
     private ScrollView scrollView;
     private SimpleArcLoader simpleArcLoader;
-    private Button btn_country;
+    private Button btn_country,btn_india;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,14 @@ public class MainActivity extends AppCompatActivity {
 
        simpleArcLoader.start();
         FetchData();
+
+        btn_india.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(getApplicationContext(),IndianCasesActivity.class));
+            }
+        });
 
         btn_country.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -129,5 +138,6 @@ public class MainActivity extends AppCompatActivity {
         scrollView=findViewById(R.id.scrollStats);
         simpleArcLoader=findViewById(R.id.loader);
         btn_country=findViewById(R.id.btnTrack);
+        btn_india=findViewById(R.id.btnIndia);
     }
 }

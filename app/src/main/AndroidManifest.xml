@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Covid19Tracker">
-        <activity android:name=".ShowCountryDataActivity"></activity>
+        <activity android:name=".IndianCasesActivity"></activity>
+        <activity android:name=".ShowCountryDataActivity" />
         <activity android:name=".AffectedCountryActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

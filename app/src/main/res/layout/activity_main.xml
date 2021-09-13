@@ -457,17 +457,37 @@
     </androidx.cardview.widget.CardView>
 
 
+
+
+        <Button
+            android:id="@+id/btnTrack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            android:background="@color/color_one"
+            android:text="Track countries"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:padding="5dp" />
+
+
     <Button
-        android:id="@+id/btnTrack"
-        android:layout_width="match_parent"
+        android:id="@+id/btnIndia"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_margin="20dp"
         android:background="@color/color_one"
-        android:text="Track countries"
+        android:text="Indian Data"
+        android:layout_toRightOf="@+id/btnTrack"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:padding="5dp" />
+
+
+
+
 
 
 
